@@ -66,17 +66,23 @@ class LoginViewController: UIViewController {
     
     @IBAction func pressLoginButton(_ sender: Any) {
 
+//        let testViewController = TestViewController(nibName: "TestViewController", bundle: nil)
+//        testViewController.modalPresentationStyle = .fullScreen
+//        self.present(testViewController, animated: true, completion: nil)
+        
+        
+        
        NotificationCenter.default.post(name: Notification.Name("pressLoginButton"), object: nil)
         
         
         
-        guard let login = loginTextField.text,
-              let password = passwordTextField.text
-        else{return}
-
-
-        if login == "Админ" && password == "Админ" {
-            performSegue(withIdentifier: toYellowSegue, sender: nil) }
+//        guard let login = loginTextField.text,
+//              let password = passwordTextField.text
+//        else{return}
+//
+//
+//        if login == "Админ" && password == "Админ" {
+//            performSegue(withIdentifier: toYellowSegue, sender: nil) }
    }
         
         
