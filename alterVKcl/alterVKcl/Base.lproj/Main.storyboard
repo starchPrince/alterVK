@@ -135,16 +135,31 @@
         <!--Друзья-->
         <scene sceneID="ito-b6-an2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-kZ-OGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="k3m-Sy-Izs" sceneMemberID="viewController">
+                <viewController id="k3m-Sy-Izs" customClass="FriendsViewController" customModule="alterVKcl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JSD-B4-izm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="b44-Ym-nhx">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wGo-3B-pIk"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="wGo-3B-pIk" firstAttribute="bottom" secondItem="b44-Ym-nhx" secondAttribute="bottom" id="1EQ-3j-wuG"/>
+                            <constraint firstItem="wGo-3B-pIk" firstAttribute="trailing" secondItem="b44-Ym-nhx" secondAttribute="trailing" id="2lq-gf-rLp"/>
+                            <constraint firstItem="b44-Ym-nhx" firstAttribute="top" secondItem="wGo-3B-pIk" secondAttribute="top" id="PgL-cL-o4a"/>
+                            <constraint firstItem="b44-Ym-nhx" firstAttribute="leading" secondItem="wGo-3B-pIk" secondAttribute="leading" id="tq4-EF-5de"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Друзья" id="UXo-HV-Fpw"/>
+                    <connections>
+                        <outlet property="tableView" destination="b44-Ym-nhx" id="EQF-LZ-5EW"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-kZ-OGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3344.9275362318845" y="-540.40178571428567"/>
         </scene>
@@ -166,12 +181,24 @@
         <!--Мои группы-->
         <scene sceneID="78E-JS-Z9a">
             <objects>
-                <viewController id="BUt-KL-o94" sceneMemberID="viewController">
+                <viewController id="BUt-KL-o94" customClass="MyGroupViewController" customModule="alterVKcl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3v-LH-gFx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lfO-2D-zt7">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4dH-i1-fBj"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="lfO-2D-zt7" firstAttribute="leading" secondItem="4dH-i1-fBj" secondAttribute="leading" id="2FC-84-sdv"/>
+                            <constraint firstItem="4dH-i1-fBj" firstAttribute="bottom" secondItem="lfO-2D-zt7" secondAttribute="bottom" id="2Sl-Ak-l0t"/>
+                            <constraint firstItem="lfO-2D-zt7" firstAttribute="top" secondItem="4dH-i1-fBj" secondAttribute="top" id="Xzf-Gn-3d8"/>
+                            <constraint firstItem="4dH-i1-fBj" firstAttribute="trailing" secondItem="lfO-2D-zt7" secondAttribute="trailing" id="ZhW-RD-E0m"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Мои группы" id="0bz-fQ-T7b">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="arrowshape.zigzag.right" catalog="system" id="gzR-n3-aGc">
@@ -180,6 +207,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="lfO-2D-zt7" id="Y09-gb-A29"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoE-sk-W9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,14 +218,29 @@
         <!--Группы-->
         <scene sceneID="OzP-FX-PnI">
             <objects>
-                <viewController id="hyj-Sa-6dY" sceneMemberID="viewController">
+                <viewController id="hyj-Sa-6dY" customClass="AllGroupViewController" customModule="alterVKcl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="371-Gn-aHc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="os6-7O-Kpk">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mn7-Ry-ixN"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="os6-7O-Kpk" firstAttribute="leading" secondItem="Mn7-Ry-ixN" secondAttribute="leading" id="85U-Ez-WP4"/>
+                            <constraint firstItem="Mn7-Ry-ixN" firstAttribute="bottom" secondItem="os6-7O-Kpk" secondAttribute="bottom" id="FL5-Lj-Wmr"/>
+                            <constraint firstItem="Mn7-Ry-ixN" firstAttribute="trailing" secondItem="os6-7O-Kpk" secondAttribute="trailing" id="NYk-tM-Coe"/>
+                            <constraint firstItem="os6-7O-Kpk" firstAttribute="top" secondItem="Mn7-Ry-ixN" secondAttribute="top" id="Q5t-e0-GMJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Группы" id="IQh-G3-eB1"/>
+                    <connections>
+                        <outlet property="tableView" destination="os6-7O-Kpk" id="bEp-x3-Aw1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y42-KH-9IT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,6 +253,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZyP-kN-mLf"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YJz-Fb-v2F">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
