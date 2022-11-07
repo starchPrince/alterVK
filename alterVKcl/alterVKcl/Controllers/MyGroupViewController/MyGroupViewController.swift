@@ -11,7 +11,7 @@ class MyGroupViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var sourceArray = ["Test Group"]
+    var myGroupArray = [Group]()
     let customCellReuseIdentifier = "customCellReuseIdentifier"
     let heightCustomTableViewCell: CGFloat = 50
     
@@ -21,5 +21,22 @@ class MyGroupViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
+        NotificationCenter.default.addObserver(self, selector: #selector(addGroup(_:)), name: Notification.Name("groupSelectedNotification"), object: nil)
+    }
+    
+    @objc func addGroup(_ notification: Notification) {
+  
+        guard let groupObject = notification.object as? Group else {return}
+        //print(groupObject.name)
+        if myGroupArray.contains(where: {sourceGroup in
+            sourceGroup.name == groupObject.name
+        }) { print("Такая группа уже есть") }
+        else { myGroupArray.append(groupObject)
+            tableView.reloadData()
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }

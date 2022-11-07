@@ -13,4 +13,20 @@ extension FriendsViewController: UITableViewDelegate {
         return heightCustomTableViewCell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == toGallerySegue,
+        let friendsPhotoArray = sender as? [String],
+           let destination = segue.destination as? GalleryViewController {
+            destination.sourceArray = friendsPhotoArray
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let friendsPhotoArray = friendsArray[indexPath.item].photoArray {
+            
+            performSegue(withIdentifier: toGallerySegue, sender: friendsPhotoArray)
+        }
+        }
 }

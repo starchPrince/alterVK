@@ -15,7 +15,7 @@ extension MyGroupViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sourceArray.count
+        return myGroupArray.count
     }
     
     
@@ -23,7 +23,7 @@ extension MyGroupViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: customCellReuseIdentifier, for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
         
         
-        cell.configure(image: nil, text: sourceArray[indexPath.row])
+        cell.configure(group: myGroupArray[indexPath.row])
         
     return cell
     }
