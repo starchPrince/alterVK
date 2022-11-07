@@ -14,6 +14,7 @@ class FriendsViewController: UIViewController {
     var friendsArray = [Friend]()
     let customCellReuseIdentifier = "customCellReuseIdentifier"
     let heightCustomTableViewCell: CGFloat = 50
+    let toGallerySegue = "toGallerySegue"
     
     
     override func viewDidLoad() {

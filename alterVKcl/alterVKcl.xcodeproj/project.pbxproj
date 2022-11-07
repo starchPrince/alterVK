@@ -24,6 +24,10 @@
 		0E6CA34A2911260B0077765F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CA3492911260B0077765F /* Group.swift */; };
 		0E6CA34C2911303F0077765F /* FriendsViewController+fillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CA34B2911303F0077765F /* FriendsViewController+fillData.swift */; };
 		0E6CA34E29114CC50077765F /* AllGroupViewController+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CA34D29114CC50077765F /* AllGroupViewController+FillData.swift */; };
+		0E833FEA29126E0B00F15352 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E833FE929126E0B00F15352 /* GalleryViewController.swift */; };
+		0E833FEE2919020D00F15352 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E833FEC2919020D00F15352 /* GalleryCell.swift */; };
+		0E833FEF2919020D00F15352 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E833FED2919020D00F15352 /* GalleryCell.xib */; };
+		0E833FF229193C9500F15352 /* photoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E833FF129193C9500F15352 /* photoViewController.swift */; };
 		0EE455812901A3EE0096D9B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE455802901A3EE0096D9B5 /* LoginViewController.swift */; };
 		0EF6025028FFFED4001F62C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6024F28FFFED4001F62C6 /* AppDelegate.swift */; };
 		0EF6025228FFFED4001F62C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6025128FFFED4001F62C6 /* SceneDelegate.swift */; };
@@ -50,6 +54,10 @@
 		0E6CA3492911260B0077765F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		0E6CA34B2911303F0077765F /* FriendsViewController+fillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsViewController+fillData.swift"; sourceTree = "<group>"; };
 		0E6CA34D29114CC50077765F /* AllGroupViewController+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupViewController+FillData.swift"; sourceTree = "<group>"; };
+		0E833FE929126E0B00F15352 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		0E833FEC2919020D00F15352 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		0E833FED2919020D00F15352 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
+		0E833FF129193C9500F15352 /* photoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoViewController.swift; sourceTree = "<group>"; };
 		0EE455802901A3EE0096D9B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0EF6024C28FFFED4001F62C6 /* alterVKcl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alterVKcl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF6024F28FFFED4001F62C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +82,8 @@
 		0E6CA32D2910FD3F0077765F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E833FF029193C5D00F15352 /* PhotoController */,
+				0E833FE829126DD400F15352 /* GalleryController */,
 				0E6CA33F291121C80077765F /* AllGroupViewController */,
 				0E6CA33829111FB80077765F /* MyGroupViewController */,
 				0E6CA335291102EA0077765F /* FriendsViewController */,
@@ -132,6 +142,32 @@
 				0E6CA3492911260B0077765F /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0E833FE829126DD400F15352 /* GalleryController */ = {
+			isa = PBXGroup;
+			children = (
+				0E833FEB291901C700F15352 /* cell */,
+				0E833FE929126E0B00F15352 /* GalleryViewController.swift */,
+			);
+			path = GalleryController;
+			sourceTree = "<group>";
+		};
+		0E833FEB291901C700F15352 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E833FEC2919020D00F15352 /* GalleryCell.swift */,
+				0E833FED2919020D00F15352 /* GalleryCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		0E833FF029193C5D00F15352 /* PhotoController */ = {
+			isa = PBXGroup;
+			children = (
+				0E833FF129193C9500F15352 /* photoViewController.swift */,
+			);
+			path = PhotoController;
 			sourceTree = "<group>";
 		};
 		0EF6024328FFFED4001F62C6 = {
@@ -228,6 +264,7 @@
 				0EF6025928FFFED5001F62C6 /* Assets.xcassets in Resources */,
 				0E6CA2F92907D9A50077765F /* TestViewController.xib in Resources */,
 				0E6CA3322910FEAF0077765F /* CustomTableViewCell.xib in Resources */,
+				0E833FEF2919020D00F15352 /* GalleryCell.xib in Resources */,
 				0EF6025728FFFED4001F62C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +280,9 @@
 				0E6CA345291122340077765F /* AllGroupVC+TableViewDelegate.swift in Sources */,
 				0EE455812901A3EE0096D9B5 /* LoginViewController.swift in Sources */,
 				0E6CA34A2911260B0077765F /* Group.swift in Sources */,
+				0E833FF229193C9500F15352 /* photoViewController.swift in Sources */,
 				0E6CA34C2911303F0077765F /* FriendsViewController+fillData.swift in Sources */,
+				0E833FEA29126E0B00F15352 /* GalleryViewController.swift in Sources */,
 				0E6CA32C2910FCE80077765F /* FriendsViewController.swift in Sources */,
 				0E6CA33A29111FE80077765F /* MyGroupViewController.swift in Sources */,
 				0E6CA34E29114CC50077765F /* AllGroupViewController+FillData.swift in Sources */,
@@ -254,6 +293,7 @@
 				0EF6025028FFFED4001F62C6 /* AppDelegate.swift in Sources */,
 				0E6CA341291122030077765F /* AllGroupViewController.swift in Sources */,
 				0E6CA2F82907D9A50077765F /* TestViewController.swift in Sources */,
+				0E833FEE2919020D00F15352 /* GalleryCell.swift in Sources */,
 				0E6CA348291124540077765F /* Friend.swift in Sources */,
 				0EF6025228FFFED4001F62C6 /* SceneDelegate.swift in Sources */,
 				0E6CA334291102B70077765F /* FriendsViewController+TableViewDataSource.swift in Sources */,

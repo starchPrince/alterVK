@@ -13,4 +13,12 @@ extension AllGroupViewController: UITableViewDelegate {
         return heightCustomTableViewCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //print(groupArray[indexPath.row].name)
+        NotificationCenter.default.post(name: NSNotification.Name("groupSelectedNotification"), object: groupArray[indexPath.row]) 
+        
+        
+    }
+    
 }
