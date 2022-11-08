@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E63C978291AABBE00B13AB9 /* FriendsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63C976291AABBE00B13AB9 /* FriendsListTableViewCell.swift */; };
+		0E63C979291AABBE00B13AB9 /* FriendsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E63C977291AABBE00B13AB9 /* FriendsListTableViewCell.xib */; };
+		0E63C986291AD07700B13AB9 /* LikeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63C985291AD07700B13AB9 /* LikeControlView.swift */; };
+		0E63C988291AD08100B13AB9 /* LikeControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E63C987291AD08100B13AB9 /* LikeControlView.xib */; };
 		0E6CA2F82907D9A50077765F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CA2F62907D9A50077765F /* TestViewController.swift */; };
 		0E6CA2F92907D9A50077765F /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6CA2F72907D9A50077765F /* TestViewController.xib */; };
 		0E6CA32C2910FCE80077765F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CA32B2910FCE80077765F /* FriendsViewController.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E63C976291AABBE00B13AB9 /* FriendsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewCell.swift; sourceTree = "<group>"; };
+		0E63C977291AABBE00B13AB9 /* FriendsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListTableViewCell.xib; sourceTree = "<group>"; };
+		0E63C985291AD07700B13AB9 /* LikeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControlView.swift; sourceTree = "<group>"; };
+		0E63C987291AD08100B13AB9 /* LikeControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeControlView.xib; sourceTree = "<group>"; };
 		0E6CA2F62907D9A50077765F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		0E6CA2F72907D9A50077765F /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		0E6CA32B2910FCE80077765F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -79,9 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E63C980291ACCA900B13AB9 /* LikeControlView */ = {
+			isa = PBXGroup;
+			children = (
+				0E63C985291AD07700B13AB9 /* LikeControlView.swift */,
+				0E63C987291AD08100B13AB9 /* LikeControlView.xib */,
+			);
+			path = LikeControlView;
+			sourceTree = "<group>";
+		};
 		0E6CA32D2910FD3F0077765F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E63C980291ACCA900B13AB9 /* LikeControlView */,
 				0E833FF029193C5D00F15352 /* PhotoController */,
 				0E833FE829126DD400F15352 /* GalleryController */,
 				0E6CA33F291121C80077765F /* AllGroupViewController */,
@@ -99,6 +117,8 @@
 			children = (
 				0E6CA32F2910FEAF0077765F /* CustomTableViewCell.swift */,
 				0E6CA3302910FEAF0077765F /* CustomTableViewCell.xib */,
+				0E63C976291AABBE00B13AB9 /* FriendsListTableViewCell.swift */,
+				0E63C977291AABBE00B13AB9 /* FriendsListTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -263,7 +283,9 @@
 				0EF6025C28FFFED5001F62C6 /* LaunchScreen.storyboard in Resources */,
 				0EF6025928FFFED5001F62C6 /* Assets.xcassets in Resources */,
 				0E6CA2F92907D9A50077765F /* TestViewController.xib in Resources */,
+				0E63C979291AABBE00B13AB9 /* FriendsListTableViewCell.xib in Resources */,
 				0E6CA3322910FEAF0077765F /* CustomTableViewCell.xib in Resources */,
+				0E63C988291AD08100B13AB9 /* LikeControlView.xib in Resources */,
 				0E833FEF2919020D00F15352 /* GalleryCell.xib in Resources */,
 				0EF6025728FFFED4001F62C6 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +305,7 @@
 				0E833FF229193C9500F15352 /* photoViewController.swift in Sources */,
 				0E6CA34C2911303F0077765F /* FriendsViewController+fillData.swift in Sources */,
 				0E833FEA29126E0B00F15352 /* GalleryViewController.swift in Sources */,
+				0E63C978291AABBE00B13AB9 /* FriendsListTableViewCell.swift in Sources */,
 				0E6CA32C2910FCE80077765F /* FriendsViewController.swift in Sources */,
 				0E6CA33A29111FE80077765F /* MyGroupViewController.swift in Sources */,
 				0E6CA34E29114CC50077765F /* AllGroupViewController+FillData.swift in Sources */,
@@ -294,6 +317,7 @@
 				0E6CA341291122030077765F /* AllGroupViewController.swift in Sources */,
 				0E6CA2F82907D9A50077765F /* TestViewController.swift in Sources */,
 				0E833FEE2919020D00F15352 /* GalleryCell.swift in Sources */,
+				0E63C986291AD07700B13AB9 /* LikeControlView.swift in Sources */,
 				0E6CA348291124540077765F /* Friend.swift in Sources */,
 				0EF6025228FFFED4001F62C6 /* SceneDelegate.swift in Sources */,
 				0E6CA334291102B70077765F /* FriendsViewController+TableViewDataSource.swift in Sources */,

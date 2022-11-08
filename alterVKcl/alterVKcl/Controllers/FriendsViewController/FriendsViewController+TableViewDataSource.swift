@@ -12,7 +12,7 @@ extension FriendsViewController: UITableViewDataSource {
     func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
+        tableView.register(UINib(nibName: "FriendsListTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
         
     }
     
@@ -27,7 +27,7 @@ extension FriendsViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: customCellReuseIdentifier, for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: customCellReuseIdentifier, for: indexPath) as? FriendsListTableViewCell else {return UITableViewCell()}
         
         
         cell.configure(friend: friendsArray[indexPath.row])
