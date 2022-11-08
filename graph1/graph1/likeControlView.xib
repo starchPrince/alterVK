@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="likeControlView" customModule="graph1" customModuleProvider="target">
+            <connections>
+                <outlet property="countLabel" destination="k0D-qw-Anz" id="g4D-EX-bhM"/>
+                <outlet property="heartButton" destination="rZM-me-rXh" id="azj-as-hfL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0D-qw-Anz">
+                    <rect key="frame" x="20" y="59" width="11" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZM-me-rXh">
+                    <rect key="frame" x="39" y="59" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="21y-6S-14E"/>
+                        <constraint firstAttribute="width" constant="40" id="FXH-Fc-rQg"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="pressHeartButton:" destination="-1" eventType="touchUpInside" id="cvT-9n-Kif"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rZM-me-rXh" firstAttribute="leading" secondItem="k0D-qw-Anz" secondAttribute="trailing" constant="8" symbolic="YES" id="6Qd-Nh-MEX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="k0D-qw-Anz" secondAttribute="top" id="7R0-7h-thA"/>
+                <constraint firstItem="rZM-me-rXh" firstAttribute="centerY" secondItem="k0D-qw-Anz" secondAttribute="centerY" id="90l-Um-wit"/>
+                <constraint firstItem="k0D-qw-Anz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="O7i-Ph-pBm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="rZM-me-rXh" secondAttribute="top" id="fs2-FZ-6Or"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24.427480916030532" y="-272.53521126760563"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

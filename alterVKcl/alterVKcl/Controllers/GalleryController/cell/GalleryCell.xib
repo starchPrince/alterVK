@@ -21,15 +21,23 @@
                         <rect key="frame" x="0.0" y="59" width="199" height="227"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LyX-am-fmo">
-                                <rect key="frame" x="15" y="15" width="169" height="197"/>
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="187"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyq-Z8-7c6" customClass="LikeControlView" customModule="alterVKcl" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="187" width="199" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="LyX-am-fmo" secondAttribute="trailing" constant="15" id="8Lc-Kd-nU5"/>
-                            <constraint firstItem="LyX-am-fmo" firstAttribute="leading" secondItem="hvs-x3-vib" secondAttribute="leading" constant="15" id="EFX-Zw-6nf"/>
-                            <constraint firstAttribute="bottom" secondItem="LyX-am-fmo" secondAttribute="bottom" constant="15" id="bb5-U6-Zai"/>
-                            <constraint firstItem="LyX-am-fmo" firstAttribute="top" secondItem="hvs-x3-vib" secondAttribute="top" constant="15" id="ns4-tk-HuG"/>
+                            <constraint firstItem="Kyq-Z8-7c6" firstAttribute="top" secondItem="LyX-am-fmo" secondAttribute="bottom" id="1id-vT-vEB"/>
+                            <constraint firstAttribute="trailing" secondItem="LyX-am-fmo" secondAttribute="trailing" id="8Lc-Kd-nU5"/>
+                            <constraint firstItem="LyX-am-fmo" firstAttribute="leading" secondItem="hvs-x3-vib" secondAttribute="leading" id="EFX-Zw-6nf"/>
+                            <constraint firstAttribute="trailing" secondItem="Kyq-Z8-7c6" secondAttribute="trailing" id="SIV-sK-JTZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Kyq-Z8-7c6" secondAttribute="bottom" id="Vvq-uF-wsm"/>
+                            <constraint firstItem="Kyq-Z8-7c6" firstAttribute="leading" secondItem="hvs-x3-vib" secondAttribute="leading" id="Ydx-na-jBI"/>
+                            <constraint firstAttribute="bottom" secondItem="LyX-am-fmo" secondAttribute="bottom" constant="40" id="bb5-U6-Zai"/>
+                            <constraint firstItem="LyX-am-fmo" firstAttribute="top" secondItem="hvs-x3-vib" secondAttribute="top" id="ns4-tk-HuG"/>
                         </constraints>
                     </view>
                 </subviews>
