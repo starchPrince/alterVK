@@ -18,11 +18,12 @@ class MyGroupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
+        configureTebleView()
         NotificationCenter.default.addObserver(self, selector: #selector(addGroup(_:)), name: Notification.Name("groupSelectedNotification"), object: nil)
     }
+    
+    
+    
     
     @objc func addGroup(_ notification: Notification) {
   
@@ -35,6 +36,8 @@ class MyGroupViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
