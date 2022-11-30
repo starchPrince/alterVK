@@ -22,11 +22,10 @@ extension FriendsViewController: UITableViewDelegate {
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if let friendsPhotoArray = friendsArray[indexPath.item].photoArray {
-            
-            performSegue(withIdentifier: toGallerySegue, sender: friendsPhotoArray)
-        }
-        }
+    // Что бы не совершался сразу переход, а работала анимация
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        if let friendsPhotoArray = friendsArray[indexPath.item].photoArray {
+//            performSegue(withIdentifier: toGallerySegue, sender: friendsPhotoArray)}
+//        }
 }

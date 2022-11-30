@@ -12,8 +12,45 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    
     
     let toYellowSegue = "fromLoginToYellow"
+    
+    
+    func animateTed() {
+        UIView.animate(withDuration: 4) {
+            self.loginTextField.transform = .identity
+        }
+        
+        UIView.animate(withDuration: 4) {
+            self.passwordTextField.transform = .identity
+        }
+        UIView.animate(withDuration: 2) {
+            self.loginButton.transform = .identity
+        }
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loginTextField.transform = CGAffineTransform(translationX: -(self.view.frame.width), y: 0)
+        passwordTextField.transform = CGAffineTransform(translationX: -(self.view.frame.width), y: 0)
+        loginButton.transform = CGAffineTransform(translationX: 0, y: -(self.view.frame.height))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       super.viewDidAppear(animated)
+        animateTed()
+    }
+    
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
