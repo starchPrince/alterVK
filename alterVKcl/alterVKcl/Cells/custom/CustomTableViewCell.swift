@@ -3,7 +3,7 @@
 //  alterVKcl
 //
 //  Created by Сергей Буланов on 01.11.2022.
-//
+// Урок 7 11 минут
 
 import UIKit
 

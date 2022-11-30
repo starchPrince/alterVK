@@ -9,6 +9,13 @@ import UIKit
 
 extension MyGroupViewController: UITableViewDataSource {
     
+    
+    func configureTebleView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: customCellReuseIdentifier)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
