@@ -53,12 +53,18 @@ class LikeControlView: UIView {
         
                 if isHeartActive {
                     heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
-                   countLike -= 1
-                    countLabel.text = String(countLike)
+//                   countLike -= 1
+//                    countLabel.text = String(countLike)
+                    UIView.transition(with: countLabel, duration: 0.4,options: .transitionFlipFromTop) {
+                        [weak self] in self?.countLabel.text = "0"}
+  
                 } else {
                     heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                    countLike += 1
-                    countLabel.text = String(countLike)
+//                    countLike += 1
+//                    countLabel.text = String(countLike)
+                    UIView.transition(with: countLabel, duration: 0.4,options: .transitionFlipFromTop) {
+                        [weak self] in self?.countLabel.text = "1"}
+  
                 }
         
                 isHeartActive = !isHeartActive

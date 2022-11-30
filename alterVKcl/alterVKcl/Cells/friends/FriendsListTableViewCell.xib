@@ -23,12 +23,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-Lq-oCK">
                                 <rect key="frame" x="0.0" y="0.0" width="143" height="127"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtM-at-I5C">
+                                <rect key="frame" x="0.0" y="0.0" width="143" height="127"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="pressImageViewButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="duv-cZ-vp4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TtM-at-I5C" firstAttribute="width" secondItem="zWF-Lq-oCK" secondAttribute="width" id="CLp-bo-XBa"/>
                             <constraint firstItem="zWF-Lq-oCK" firstAttribute="leading" secondItem="lay-VD-hfG" secondAttribute="leading" id="CnO-qy-q7b"/>
+                            <constraint firstItem="TtM-at-I5C" firstAttribute="centerY" secondItem="zWF-Lq-oCK" secondAttribute="centerY" id="Zdb-ZH-qSW"/>
                             <constraint firstAttribute="trailing" secondItem="zWF-Lq-oCK" secondAttribute="trailing" id="fuf-f7-Mcj"/>
                             <constraint firstAttribute="bottom" secondItem="zWF-Lq-oCK" secondAttribute="bottom" id="kC4-L8-dru"/>
+                            <constraint firstItem="TtM-at-I5C" firstAttribute="height" secondItem="zWF-Lq-oCK" secondAttribute="height" id="lOi-x6-Xcw"/>
+                            <constraint firstItem="TtM-at-I5C" firstAttribute="centerX" secondItem="zWF-Lq-oCK" secondAttribute="centerX" id="qAM-qf-l8H"/>
                             <constraint firstItem="zWF-Lq-oCK" firstAttribute="top" secondItem="lay-VD-hfG" secondAttribute="top" id="vW4-uy-OgZ"/>
                         </constraints>
                     </view>

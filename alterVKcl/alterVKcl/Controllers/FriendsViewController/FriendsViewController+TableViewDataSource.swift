@@ -31,7 +31,18 @@ extension FriendsViewController: UITableViewDataSource {
         
         
         cell.configure(friend: friendsArray[indexPath.row])
+        cell.delegate = self
         
     return cell
     }
+}
+
+
+extension FriendsViewController: FriendsListTableViewCellDelegate {
+    func cellPressed(friend: Friend) {
+        if let friendsPhotoArray = friend.photoArray {
+        performSegue(withIdentifier: toGallerySegue, sender: friendsPhotoArray)}
+    }
+    
+    
 }

@@ -124,6 +124,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="f9Y-Hc-jdB" id="7aZ-kp-a6X"/>
                         <outlet property="loginTextField" destination="oUt-Ya-K3l" id="k6b-fA-JhZ"/>
                         <outlet property="passwordTextField" destination="ekS-fG-oYv" id="ayk-Ub-qGA"/>
                         <outlet property="scrollView" destination="ghX-PI-pTj" id="fJ7-QA-4fH"/>

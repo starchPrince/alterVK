@@ -7,11 +7,20 @@
 
 import UIKit
 
+protocol FriendsListTableViewCellDelegate: AnyObject {
+    func cellPressed(friend: Friend)
+}
+
+
 class FriendsListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var backView: UIView!
+    
+    weak var delegate: FriendsListTableViewCellDelegate?
+    var savedFriend: Friend?
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -40,6 +49,33 @@ class FriendsListTableViewCell: UITableViewCell {
         if let imageName = friend.avatar {
             avatarImageView.image = UIImage(named: imageName) }
             nameLabel.text = friend.name
+        self.savedFriend = friend
+    }
+    
+    
+    @IBAction func pressImageViewButton(_ sender: Any) {
+        
+        let sourceFrame = avatarImageView.frame
+        UIView.animate(withDuration: 2) {[weak self] in
+            guard let self = self else {return}
+            self.avatarImageView.frame = CGRect.zero} completion: { isSuccess in
+                if isSuccess {
+                    UIView.animate(withDuration: 3,
+                                   delay: 0,
+                                   usingSpringWithDamping: 0.7,
+                                   initialSpringVelocity: 0,
+                                   animations: { [weak self] in
+                        guard let self = self else {return}
+                        self.avatarImageView.frame = sourceFrame })
+                    {[weak self] isSuccessfully in
+                        if isSuccessfully,
+                           let self = self,
+                           let friend = self.savedFriend {
+                            self.delegate?.cellPressed(friend: friend)}
+                    }
+            }
+        }
+        
     }
     
 }
